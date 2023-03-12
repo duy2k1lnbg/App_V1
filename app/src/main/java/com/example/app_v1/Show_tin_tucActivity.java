@@ -9,7 +9,7 @@ import android.view.View;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 
-public class Show_tin_tucActivity {
+public class Show_tin_tucActivity extends AppCompatActivity {
     WebView wbv_tin_tuc;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
