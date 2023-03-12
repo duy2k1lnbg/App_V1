@@ -34,6 +34,8 @@ public class MainActivity extends AppCompatActivity {
     ListView lv_tin_tuc;
     String link = "https://vtc.vn/rss/thoi-su.rss";
     String link_2 = "https://vtv.vn/trong-nuoc/xa-hoi.rss";
+
+    String link_3 = "https://vnexpress.net/rss/tin-moi-nhat.rss?cate_id=4619&for_mobile=1";
     List<Tin_tuc> tin_tucList;
 
     Button btn_show;
@@ -198,6 +200,35 @@ public class MainActivity extends AppCompatActivity {
             Toast.makeText(getApplicationContext() , "wifi or 3G/4G  Connected",
                     Toast.LENGTH_SHORT).show();
             show(link);
+        }else {
+            AlertDialog.Builder builder = new AlertDialog.Builder(this);
+            builder.setTitle("Notifycation").setMessage("Vui lòng bật 3G/4G hoặc Wifi để xem được tin tức");
+            builder.setCancelable(false);
+            builder.setPositiveButton("ok", new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface dialog, int which) {
+                    dialog.dismiss();
+                }
+            });
+
+            AlertDialog dialog = builder.create();
+            dialog.show();
+        }
+    }
+
+    public void load_data_3(View view){
+        ConnectivityManager connectivityManager =
+                (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
+        NetworkInfo wifi =
+                connectivityManager.getNetworkInfo(ConnectivityManager.TYPE_WIFI);
+
+        NetworkInfo mobile_3g =
+                connectivityManager.getNetworkInfo(ConnectivityManager.TYPE_MOBILE);
+        if (mobile_3g.isConnected() || wifi.isConnected()){
+
+            Toast.makeText(getApplicationContext() , "wifi or 3G/4G  Connected",
+                    Toast.LENGTH_SHORT).show();
+            show(link_3);
         }else {
             AlertDialog.Builder builder = new AlertDialog.Builder(this);
             builder.setTitle("Notifycation").setMessage("Vui lòng bật 3G/4G hoặc Wifi để xem được tin tức");
