@@ -8,7 +8,8 @@ import android.widget.BaseAdapter;
 import android.widget.TextView;
 
 import java.util.List;
-public class TinTuc_Adapter extends BaseAdapter{
+
+public class TinTuc_Adapter extends BaseAdapter {
     Context context;
     List<Tin_tuc> tin_tucList;
 
