@@ -31,7 +31,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
-
     ListView lv_tin_tuc;
     String link = "https://vtc.vn/rss/thoi-su.rss";
     String link_2 = "https://vtv.vn/trong-nuoc/xa-hoi.rss";
