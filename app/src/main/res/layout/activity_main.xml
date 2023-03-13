@@ -36,7 +36,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:onClick="load_data"
-            android:text="Tin Tức VTV"
+            android:text="Tin Tức Trong Nước VTV"
             android:textAllCaps="false"
             android:textSize="16sp"
             android:backgroundTint="@color/purple_500"
@@ -49,6 +49,18 @@
             android:layout_height="wrap_content"
             android:onClick="load_data_3"
             android:text="Tin tức Bắc Giang"
+            android:textAllCaps="false"
+            android:textSize="16sp"
+            android:backgroundTint="@color/purple_500"
+            android:textColor="#ffffff"
+            android:layout_marginBottom="16dp"/>
+
+        <Button
+            android:id="@+id/btn_show2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="load_data_4"
+            android:text="Tin Tức Thế Giới VTV"
             android:textAllCaps="false"
             android:textSize="16sp"
             android:backgroundTint="@color/purple_500"

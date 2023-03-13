@@ -56,10 +56,10 @@ public class TinTuc_Adapter extends BaseAdapter {
         }else {
             viewHoler = (ViewHoler) convertView.getTag();
         }
-//        viewHoler.tv_link.setText(tin_tucList.get(position).getLink());
+//      viewHoler.tv_link.setText(tin_tucList.get(position).getLink());
         viewHoler.tv_link.setText("");
         viewHoler.tv_title.setText(tin_tucList.get(position).getTitle());
-//        viewHoler.tv_des.setText(tin_tucList.get(position).getDes());
+//      viewHoler.tv_des.setText(tin_tucList.get(position).getDes());
         viewHoler.tv_des.setText("");
         viewHoler.tv_pubDate.setText(tin_tucList.get(position).getPubDate());
         return convertView;
